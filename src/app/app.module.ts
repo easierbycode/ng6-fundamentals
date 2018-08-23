@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { EventsAppComponent } from './events-app.component';
 import { EventsListComponent } from './events/events-list.component';
 import { EventThumbnailComponent } from './events/event-thumbnail.component';
+import { EventService } from './events/shared';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,9 @@ import { EventThumbnailComponent } from './events/event-thumbnail.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    EventService
+  ],
   bootstrap: [ EventsAppComponent ]
 })
 export class AppModule { }
